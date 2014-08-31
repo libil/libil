@@ -1,4 +1,5 @@
 # Libil
+[![Build Status](https://travis-ci.org/lynxluna/libil.svg?branch=master)](https://travis-ci.org/lynxluna/libil)
 
 Libil is a library and a command line to convert a sentence or a word to using [Basa Walikan
 Jogja](http://jengjeng.matriphe.com/2007/06/09/bahasa-walikan-jogja/) implemented in Ruby.
