@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+require 'libil'
+require 'optparse'
+
+cmd_parser = OptionParser.new do |opts|
+  opts.banner = <<-USAGE
+Usage: choc <word_or_sentence>
+Example: choc "Ayo Bali"
+  USAGE
+end
+
+
+begin 
+  args = cmd_parser.parse(ARGV)
+
+  if args.count < 1
+    puts "To Few parameters"
+    puts cmd_parser
+    exit 1
+  end
+  
+  if args.count > 1
+    mapped_args = args.map { |a| Libil::convert(a) }
+    puts mapped_args.join(' ')
+  else
+    puts Libil.convert(args[0])
+  end
+
+
+rescue OptionParser::InvalidOption => e
+  puts e
+  puts cmd_parser
+  exit 1
+end
