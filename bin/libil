@@ -3,11 +3,21 @@
 require 'libil'
 require 'optparse'
 
+$malang = false
+$version = '0.1.1'
+
 cmd_parser = OptionParser.new do |opts|
   opts.banner = <<-USAGE
-Usage: choc <word_or_sentence>
-Example: choc "Ayo Bali"
+Usage: libil <word_or_sentence>
+Example: libil "Ayo Bali"
   USAGE
+  opts.on("-m", "--malang", "Use Malang style walikan") do
+    $malang = true
+  end
+  opts.on("-v", "--version", "Show Version") do
+    puts "libil version #{$version}"
+    exit
+  end
 end
 
 
@@ -15,16 +25,26 @@ begin
   args = cmd_parser.parse(ARGV)
 
   if args.count < 1
-    puts "To Few parameters"
+    puts "Too Few parameters"
     puts cmd_parser
     exit 1
   end
   
   if args.count > 1
-    mapped_args = args.map { |a| Libil::convert(a) }
+    mapped_args = []
+    if $malang
+      mapped_args = args.map { |a| Libil::convert_ngalam(a) }
+    else
+       mapped_args = args.map { |a| Libil::convert(a) }
+    end
+
     puts mapped_args.join(' ')
   else
-    puts Libil.convert(args[0])
+    if $malang
+      puts Libil.convert_ngalam(args[0])
+    else
+      puts Libil.convert(args[0])
+    end
   end
 
 

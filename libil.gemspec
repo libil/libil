@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name    = "libil"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.date    = "2014-08-31"
-  s.summary = "Library for converting string to 'Basa Walikan Jogja'"
+  s.summary = "Library for converting string to 'Basa Walikan Jogja and Malang'"
   s.description = <<-DESC
-  Libil is a library and command line tools to implement Basa Walikan Jogja.
+  Libil is a library and command line tools to implement Basa Walikan, Jogja and Malang Style
   DESC
   s.authors = ["Didiet Noor"]
   s.email   = "lynxluna@gmail.com"

@@ -26,4 +26,10 @@ describe Libil, "#tokenize" do
     expect(Libil::convert("sangi")).to eq("bali")
     expect(Libil::convert("nyothe")).to eq("kowe")
   end
+
+  it "returns reversed Malang Style string" do
+    expect(Libil::convert_ngalam("motor")).to eq("rotom")
+    expect(Libil::convert_ngalam("Malang")).to eq("Ngalam")
+    expect(Libil::convert_ngalam("Motor Malang")).to eq("Rotom Ngalam")
+  end
 end

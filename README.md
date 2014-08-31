@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/lynxluna/libil.svg?branch=master)](https://travis-ci.org/lynxluna/libil)
 
 Libil is a library and a command line to convert a sentence or a word to using [Basa Walikan
-Jogja](http://jengjeng.matriphe.com/2007/06/09/bahasa-walikan-jogja/) implemented in Ruby.
+Jogja](http://jengjeng.matriphe.com/2007/06/09/bahasa-walikan-jogja/) and
+[Malang](http://halomalang.com/serba-serbi/ngalamers-harus-tahu-sejarah-boso-walikan)  implemented in Ruby.
 
 ## Installation
 
@@ -40,6 +41,14 @@ $ libil Bali Ora, Mas?
 
 If you're Javanese or understand Javanese language you ionder what's the meaning of the tool name, try running it with
 "libil" as the argument.
+
+### Malang Mode
+
+Since `0.1.1` we also support Malang Mode of basa walikan.
+
+```bash
+$ libil --malang Malang
+```
 
 ## License
 

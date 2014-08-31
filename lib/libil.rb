@@ -9,10 +9,34 @@ module Libil
   # The Consonant map of Javanese alphabet
   CONSONANT_MAP = ['h', 'n', 'c', 'r', 'k', 'd', 't', 's', 'w', 'l', 'p', 'dh', 'j', 'y', 'ny', 'm', 'g', 'b', 'th', 'ng']; # 15 - 19
   
+  # This will convert malang style
+  def self.convert_ngalam(sentence)
+    converted_words = sentence.split(/ /).map {|word| Libil::convert_word_ngalam(word) }
+    return converted_words.join(' ')
+  end
+
   # This is to convert the entire sentence
   def self.convert(sentence)
     converted_words = sentence.split(/ /).map {|word| Libil::convert_word(word)}
     return converted_words.join(' ')
+  end
+
+  def self.convert_word_ngalam(word)
+    if (word.strip.length == 0)
+      return word
+    end
+    
+    # Detect if the word is capitalized
+    is_capitalized = (word == word.capitalize)
+
+    tokens = self.tokenize(word)
+    orig_word = tokens.reverse.join('')
+
+    if is_capitalized
+      return orig_word.capitalize
+    else
+      return orig_word
+    end
   end
   
   # This function is to convert one word only
