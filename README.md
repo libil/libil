@@ -1,4 +1,5 @@
 # Libil
+
 [![Build Status](https://travis-ci.org/lynxluna/libil.svg?branch=master)](https://travis-ci.org/lynxluna/libil)
 
 Libil is a library and a command line to convert a sentence or a word to using [Basa Walikan
@@ -36,6 +37,9 @@ If you want to use it as command line, easy just run `libil` followed by word or
 ```bash
 $ libil Bali Ora, Mas?
 ```
+
+If you're Javanese or understand Javanese language you ionder what's the meaning of the tool name, try running it with
+"libil" as the argument.
 
 ## License
 
