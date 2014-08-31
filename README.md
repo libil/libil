@@ -50,6 +50,15 @@ Since `0.1.1` we also support Malang Mode of basa walikan.
 $ libil --malang Malang
 ```
 
+The API for Malang Mode is:
+
+```ruby
+require 'libil'
+converted = Libil::convert_ngalam("Surabaya Malang")
+```
+
+Enjoy
+
 ## License
 
 The MIT License (MIT)
