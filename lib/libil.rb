@@ -83,28 +83,12 @@ module Libil
     loop do
       break if ss.eos?
       c = ss.getch
-      if (c.downcase == 'n')
-        if not ss.eos?
-          cc = ss.getch
-          if (cc.downcase == 'y' or cc.downcase == 'g')
-            t << [c, cc].join('')
-          else
-            t << c; t << cc
-          end
-        else
-          t << c
-        end
-      elsif ( c.downcase == 'd' or c.downcase == 't')
-        if not ss.eos?
-          cc = ss.getch
-          if (cc.downcase == 'h')
-            t << [c, cc].join('')
-          else
-            t << c; t << cc
-          end
-        else
-          t << c
-        end
+      cc = ss.peek(1)
+      digraph = c + cc
+
+      if (CONSONANT_MAP.include?(digraph.downcase))
+        ss.getch
+        t << digraph
       else
         t << c
       end

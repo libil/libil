@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name    = "libil"
-  s.version = "0.1.1"
-  s.date    = "2014-08-31"
+  s.version = "0.1.2"
+  s.date    = "2014-09-12"
   s.summary = "Library for converting string to 'Basa Walikan Jogja and Malang'"
   s.description = <<-DESC
   Libil is a library and command line tools to implement Basa Walikan, Jogja and Malang Style
