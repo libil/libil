@@ -6,6 +6,7 @@ require 'strscan'
 
 module Libil
   
+  GEM_VERSION = "0.1.3" 
   # The Consonant map of Javanese alphabet
   CONSONANT_MAP = ['h', 'n', 'c', 'r', 'k', 'd', 't', 's', 'w', 'l', 'p', 'dh', 'j', 'y', 'ny', 'm', 'g', 'b', 'th', 'ng']; # 15 - 19
   

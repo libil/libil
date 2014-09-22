@@ -4,7 +4,7 @@ require 'libil'
 require 'optparse'
 
 $malang = false
-$version = '0.1.1'
+$version = Libil::GEM_VERSION
 
 cmd_parser = OptionParser.new do |opts|
   opts.banner = <<-USAGE
